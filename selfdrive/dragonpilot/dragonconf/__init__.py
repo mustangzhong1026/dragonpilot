@@ -59,7 +59,7 @@ default_conf = {
   'DragonEnableAutoLC': '0',
   'DragonAssistedLCMinMPH': '35',
   'DragonAutoLCMinMPH': '40',
-  'DragonAutoLCDelay': '1',
+  'DragonAutoLCDelay': '0',
   'DragonBTG': '0',
   'DragonBootHotspot': '0',
   'DragonAccelProfile': '0', # OFF = 0, ECO = 1, NORMAL = 2, SPORT = 3
