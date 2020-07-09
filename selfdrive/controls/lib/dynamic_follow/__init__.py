@@ -272,11 +272,11 @@ class DynamicFollow:
       # y_dist = [1.3781, 1.3791, 1.3802, 1.3825, 1.3984, 1.4249, 1.4194, 1.3162, 1.1916, 1.0145, 0.9855, 0.9562]  # original
       # y_dist = [1.3781, 1.3791, 1.3112, 1.2442, 1.2306, 1.2112, 1.2775, 1.1977, 1.0963, 0.9435, 0.9067, 0.8749]  # avg. 7.3 ft closer from 18 to 90 mph
       y_dist = [1.2381, 1.2691, 1.2815, 1.3045, 1.3183, 1.3065, 1.2754, 1.2277, 1.1441, 1.0238, 0.9461, 0.9156]
-      profile_mod_pos = [0.65, 1.0, 1.1, 1.2]
+      profile_mod_pos = [0.65, 1.15, 1.1, 1.2]
       profile_mod_neg = [1.7, 1.5, 0.85, 0.75]
     elif df_profile == PROFILE_NORMAL:  # default to relaxed/stock
       y_dist = [1.2381, 1.2894, 1.3306, 1.3728, 1.4083, 1.4354, 1.4578, 1.4757, 1.5269, 1.5683, 1.5791, 1.5939, 1.6140]
-      profile_mod_pos = [0.9, 0.8, 0.55, 0.6]
+      profile_mod_pos = [0.75, 0.95, 0.55, 0.6]
       profile_mod_neg = [1.05, 0.925, 0.95, 0.9]
     else:
       raise Exception('Unknown profile type: {}'.format(df_profile))
