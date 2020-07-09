@@ -312,7 +312,7 @@ class CarInterface(CarInterfaceBase):
         max_bp = 0.
       ret.gasMaxBP = [max_bp]
       ret.gasMaxV = [0.5]
-      ret.longitudinalTuning.kpV = [2.6, 1.65, 1.3]
+      ret.longitudinalTuning.kpV = [2.6, 1.55, 1.3]
       ret.longitudinalTuning.kiV = [0.54, 0.33]
 
     return ret
