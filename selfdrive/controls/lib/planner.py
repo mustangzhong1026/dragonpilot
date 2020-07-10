@@ -44,7 +44,7 @@ SPEED_PERCENTILE_IDX = 7
 # accel profile by @arne182
 _AP_CRUISE_MIN_V = [-2.0, -1.5, -1.0, -0.7, -0.5]
 _AP_CRUISE_MIN_V_ECO = [-1.0, -0.7, -0.6, -0.5, -0.3]
-_AP_CRUISE_MIN_V_SPORT = [-3.0, -2.6, -2.3, -2.0, -1.0]
+_AP_CRUISE_MIN_V_SPORT = [-2.0, -2.6, -2.3, -2.0, -1.0]
 _AP_CRUISE_MIN_V_FOLLOWING = [-2.0, -4.0, -3.5, -2.5, -2.0]
 _AP_CRUISE_MIN_BP = [0.0, 5.0, 10.0, 20.0, 55.0]
 
