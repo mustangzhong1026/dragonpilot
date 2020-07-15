@@ -56,7 +56,7 @@ default_conf = {
   'DragonToyotaSnGMod': '0',
   'DragonWazeMode': '0',
   'DragonRunWaze': '0',
-  'DragonEnableAutoLC': '0',
+  'DragonEnableAutoLC': '1',
   'DragonAssistedLCMinMPH': '35',
   'DragonAutoLCMinMPH': '45',
   'DragonAutoLCDelay': '0',
