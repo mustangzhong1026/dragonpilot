@@ -57,9 +57,9 @@ default_conf = {
   'DragonWazeMode': '0',
   'DragonRunWaze': '0',
   'DragonEnableAutoLC': '0',
-  'DragonAssistedLCMinMPH': '45',
-  'DragonAutoLCMinMPH': '60',
-  'DragonAutoLCDelay': '2',
+  'DragonAssistedLCMinMPH': '40',
+  'DragonAutoLCMinMPH': '45',
+  'DragonAutoLCDelay': '0',
   'DragonBTG': '0',
   'DragonBootHotspot': '0',
   'DragonAccelProfile': '0', # OFF = 0, ECO = 1, NORMAL = 2, SPORT = 3
