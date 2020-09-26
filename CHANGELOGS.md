@@ -1,3 +1,39 @@
+2020-09-25 (0.7.8.0)
+========================
+* VW 加入 6 分鐘時間方向盤控制限制輔助方案。(特別感謝 @actuallylemoncurd 提供代碼)
+* VW added 6 minutes timebomb assist. (dp_timebomb_assist, special thanks to @actuallylemoncurd)
+
+2020-09-23 (0.7.8.0)
+========================
+* 修正在沒網路的情況下，開機超過五分鐘的問題。
+* Fixed 5+ minutes boot time issue when there is no internet connection.
+* 錯誤回傳改使用 dp 的主機。
+* Used dp server for error reporting.
+* 更新服務改使用 gitee 的 IP 檢查連線狀態。
+* updated service uses gitee IP address instead.
+
+2020-09-21 (0.7.8.0)
+========================
+* 強制關閉 panda 檢查 DOS 硬體。
+* Force disabled DOS hardware check in panda.
+
+2020-09-18 (0.7.8.0)
+========================
+* gpxd 記錄改自動存成 zip 格式。
+* gpxd now store in zip format.
+
+2020-09-15 (0.7.8.0)
+========================
+* 加入 Honda Jade 支援。(感謝 @李俊灝)
+* Added Honda Jade support. (Thanks to @lijunhao731)
+* 修正 ui.cc 內存越界的問題。(感謝 @piggy 提供)
+* Fixed ui.cc memory out of bound issue. (Thanks to @piggy)
+
+2020-09-01 (0.7.8.0)
+========================
+* 加入 ko-KR 翻譯。
+* Added ko-KR translation.
+
 2020-08-21 (0.7.8.0)
 ========================
 * 基於最新 openpilot 0.7.8 devel.

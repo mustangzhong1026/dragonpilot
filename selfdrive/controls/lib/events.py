@@ -183,7 +183,7 @@ def below_steer_speed_alert(CP, sm, metric):
   unit = "kph" if metric else "mph"
   return Alert(
     _("TAKE CONTROL"),
-    _("Steer Unavailable Below") + (" %d %s" % (speed, unit)),
+    _("Steer Unavailable Below %d %s") % (speed, unit),
     AlertStatus.userPrompt, AlertSize.mid,
     Priority.MID, VisualAlert.steerRequired, AudibleAlert.none, 0., 0.4, .3)
 
@@ -191,8 +191,8 @@ def calibration_incomplete_alert(CP, sm, metric):
   speed = int(Filter.MIN_SPEED * (CV.MS_TO_KPH if metric else CV.MS_TO_MPH))
   unit = "kph" if metric else "mph"
   return Alert(
-    _("Calibration in Progress:") + (" %d%%" % sm['liveCalibration'].calPerc),
-    _("Drive Above") + (" %d %s" % (speed, unit)),
+    _("Calibration in Progress: %d%%") % sm['liveCalibration'].calPerc,
+    _("Drive Above %d %s") % (speed, unit),
     AlertStatus.normal, AlertSize.mid,
     Priority.LOWEST, VisualAlert.none, AudibleAlert.none, 0., 0., .2)
 
@@ -209,6 +209,7 @@ def wrong_car_mode_alert(CP, sm, metric):
   if CP.carName == "honda":
     text = _("Main Switch Off")
   return NoEntryAlert(text, duration_hud_alert=0.)
+
 
 EVENTS = {
   # ********** events with no alerts **********
@@ -669,16 +670,6 @@ EVENTS = {
     ET.NO_ENTRY: NoEntryAlert(_("Device Fell Off Mount")),
   },
 
-  EventName.posenetInvalid: {
-    ET.SOFT_DISABLE: SoftDisableAlert(_("Vision Model Output Uncertain")),
-    ET.NO_ENTRY: NoEntryAlert(_("Vision Model Output Uncertain")),
-  },
-
-  EventName.deviceFalling: {
-    ET.SOFT_DISABLE: SoftDisableAlert(_("Device Fell Off Mount")),
-    ET.NO_ENTRY: NoEntryAlert(_("Device Fell Off Mount")),
-  },
-
   EventName.lowMemory: {
     ET.SOFT_DISABLE: SoftDisableAlert(_("Low Memory: Reboot Your Device")),
     ET.PERMANENT: Alert(
@@ -859,5 +850,30 @@ EVENTS = {
      "",
      AlertStatus.userPrompt, AlertSize.small,
      Priority.LOW, VisualAlert.steerRequired, AudibleAlert.chimePrompt, .1, .1, .1),
+  },
+
+  # timebomb
+  EventName.timebombWarn: {
+    ET.WARNING: Alert(
+      _("WARNING"),
+      _("Grab wheel to start bypass"),
+      AlertStatus.normal, AlertSize.mid,
+      Priority.LOW, VisualAlert.steerRequired, AudibleAlert.chimeWarning1, .4, 2., 3.),
+  },
+
+  EventName.timebombBypassing: {
+    ET.WARNING: Alert(
+      _("BYPASSING"),
+      _("HOLD WHEEL"),
+      AlertStatus.normal, AlertSize.mid,
+      Priority.LOW, VisualAlert.steerRequired, AudibleAlert.chimeWarning1, .4, 2., 3.),
+  },
+
+  EventName.timebombBypassed: {
+    ET.WARNING: Alert(
+      _("Bypassed!"),
+      _("Release wheel when ready"),
+      AlertStatus.normal, AlertSize.mid,
+      Priority.LOW, VisualAlert.steerRequired, AudibleAlert.chimeWarning1, 3., 2., 3.),
   },
 }
