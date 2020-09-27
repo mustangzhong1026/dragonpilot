@@ -58,7 +58,7 @@ _DP_CRUISE_MAX_V_FOLLOWING = [2.0, 1.2, 0.8, 0.31, 0.1]
 _DP_CRUISE_MAX_BP = [0., 5., 10., 20., 55.]
 
 # Lookup table for turns
-_DP_TOTAL_MAX_V = [1.3, 1.0, 1.9]
+_DP_TOTAL_MAX_V = [3.3, 1.1, 1.3]
 _DP_TOTAL_MAX_BP = [0., 25., 55.]
 
 def dp_calc_cruise_accel_limits(v_ego, following, dp_profile):
