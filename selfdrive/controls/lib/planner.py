@@ -54,7 +54,7 @@ _DP_CRUISE_MIN_BP = [0.0, 5.0, 10.0, 20.0, 55.0]
 _DP_CRUISE_MAX_V = [1.85, 1.27, 0.88, 0.37, 0.19]
 _DP_CRUISE_MAX_V_ECO = [1.68, 1.1, 0.71, 0.315, 0.09]
 _DP_CRUISE_MAX_V_SPORT = [2.5, 1.8, 1.1, 0.7, 0.4]
-_DP_CRUISE_MAX_V_FOLLOWING = [2.0, 1.3, 0.92, 0.4, 0.12]
+_DP_CRUISE_MAX_V_FOLLOWING = [2.0, 1.275, 0.92, 0.4, 0.12]
 _DP_CRUISE_MAX_BP = [0., 5., 10., 20., 55.]
 
 # Lookup table for turns
